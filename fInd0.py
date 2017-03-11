@@ -5,12 +5,11 @@ import argparse
 from argparse import RawTextHelpFormatter
 from pprint import pprint
 import json
-######FUNCTION EXPORTRESULTS #######
+######FUNCTION EXPORT RESULTS #######
 def ExportResults(data):
 	#Export the results in json format
 	with open ('output.json','w') as f:
 		json.dump(data,f)
-#URL: https://sedo.com/search/?language=es&gclid=CKvSl9ewutICFQtAGwodgxgAdQ&keyword=vodafone
 parser = argparse.ArgumentParser(description='This script searchs the subdominios about a domain using the results indexed of Bing search', formatter_class=RawTextHelpFormatter)
 parser.add_argument('-t','--target', help="The keyword which it wants to search",required=True)
 parser.add_argument('-l','--language', help='indiate the language of the search\n\n\t(es)-Spanish(default)\n\t(en)-English', required=False)
