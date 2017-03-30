@@ -10,9 +10,9 @@ def ExportResults(data):
 	#Export the results in json format
 	with open ('output.json','w') as f:
 		json.dump(data,f)
-parser = argparse.ArgumentParser(description='This script searchs the subdominios about a domain using the results indexed of Bing search', formatter_class=RawTextHelpFormatter)
+parser = argparse.ArgumentParser(description='This script searchs domains and subdomains about a domain using the results indexed of Bing search', formatter_class=RawTextHelpFormatter)
 parser.add_argument('-t','--target', help="The keyword which it wants to search",required=True)
-parser.add_argument('-l','--language', help='indiate the language of the search\n\n\t(es)-Spanish(default)\n\t(en)-English', required=False)
+parser.add_argument('-l','--language', help='Indicate the language of the search\n\n\t(es)-Spanish(default)\n\t(en)-English', required=False)
 args = parser.parse_args()
 print "  __ _____           _  ___"  
 print " / _|_   _|         | |/ _ \ "
